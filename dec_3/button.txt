@@ -1,0 +1,49 @@
+let button = UIButton()
+        button.adjustsImageWhenDisabled = false;
+        button.setTitle("Start Messaging", for: .normal)
+        button.titleLabel?.font = UIFont(name: "HelveticaNeue-Medium", size: 20)
+        button.setTitleColor(.white, for: .normal)
+        let buttonColor = UIColor(rgb: 0x2ca5e0)
+        var bgImage: UIImage?
+        var bgHighlightedImage: UIImage?
+        UIGraphicsBeginImageContextWithOptions(CGSize(width: 48.0, height: 48.0), false, 0)
+        
+        do {
+            let context = UIGraphicsGetCurrentContext()
+            context?.setFillColor(buttonColor.cgColor)
+            context?.fillEllipse(in: CGRect(x: 0, y: 0, width: 48, height: 48))
+            bgImage = UIGraphicsGetImageFromCurrentImageContext()?.stretchableImage(withLeftCapWidth: 24, topCapHeight: 24)
+            UIGraphicsEndImageContext()
+        }
+        
+        do {
+            let context = UIGraphicsGetCurrentContext()
+            var hue: CGFloat = 0
+            var sat: CGFloat = 0
+            var bri: CGFloat = 0
+            buttonColor.getHue(&hue, saturation: &sat, brightness: &bri, alpha: nil)
+            let tempColor = UIColor(hue: hue, saturation: sat, brightness: bri * 0.7, alpha: 1.0)
+            context?.setFillColor(tempColor.cgColor)
+            context?.fillEllipse(in: CGRect(x: 0, y: 0, width: 48, height: 48))
+            bgHighlightedImage = UIGraphicsGetImageFromCurrentImageContext()?.stretchableImage(withLeftCapWidth: 24, topCapHeight: 24)
+            UIGraphicsEndImageContext()
+        }
+        
+        button.contentEdgeInsets = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+        button.setBackgroundImage(bgImage, for: .normal)
+        button.setBackgroundImage(bgHighlightedImage, for: .highlighted)
+        button.bounds = CGRect(x: 0, y: 0, width: 200, height: 48)
+        button.sizeToFit()
+        view.addSubview(button)
+        button.center = view.center
+
+
+
+
+
+
+extension UIColor {
+    convenience init(rgb: UInt32) {
+        self.init(red: CGFloat((rgb >> 16) & 0xff) / 255.0, green: CGFloat((rgb >> 8) & 0xff) / 255.0, blue: CGFloat(rgb & 0xff) / 255.0, alpha: 1.0)
+    }
+}
