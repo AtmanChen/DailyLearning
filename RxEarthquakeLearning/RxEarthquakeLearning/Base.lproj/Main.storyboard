@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0vl-2h-reO">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Earthquakes-->
+        <scene sceneID="rIE-EQ-xVX">
+            <objects>
+                <tableViewController clearsSelectionOnViewWillAppear="NO" id="ADJ-iy-bVm" customClass="EarthquakeListViewController" customModule="RxEarthquakeLearning" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="65" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="SL1-ya-qxo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="EarthquakeTableViewCell" rowHeight="65" id="98c-rY-oQF" customClass="EarthquakeTableViewCell" customModule="RxEarthquakeLearning" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="65"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="98c-rY-oQF" id="Lf2-Sj-LVw">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="64.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="br2-kL-U2X">
+                                            <rect key="frame" x="16" y="11" width="69" height="21"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vVF-4x-A8Y">
+                                            <rect key="frame" x="16" y="38" width="29" height="16"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m75-zD-T3o">
+                                            <rect key="frame" x="333" y="22" width="26" height="21"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ztu-7b-4Op">
+                                            <rect key="frame" x="235" y="7.5" width="90" height="50"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="JHT-dJ-0mY"/>
+                                                <constraint firstAttribute="width" constant="90" id="PkD-z8-3wD"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="br2-kL-U2X" firstAttribute="top" secondItem="Lf2-Sj-LVw" secondAttribute="topMargin" id="0mv-RP-I3p"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="m75-zD-T3o" secondAttribute="trailing" id="0rd-Rz-m40"/>
+                                        <constraint firstItem="m75-zD-T3o" firstAttribute="leading" secondItem="Ztu-7b-4Op" secondAttribute="trailing" constant="8" id="8PQ-Hj-5rW"/>
+                                        <constraint firstItem="Ztu-7b-4Op" firstAttribute="centerY" secondItem="Lf2-Sj-LVw" secondAttribute="centerY" id="LOw-jy-7qi"/>
+                                        <constraint firstItem="m75-zD-T3o" firstAttribute="centerY" secondItem="Lf2-Sj-LVw" secondAttribute="centerY" id="SRq-YC-Oa3"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="vVF-4x-A8Y" secondAttribute="bottom" id="So1-UI-n4E"/>
+                                        <constraint firstItem="vVF-4x-A8Y" firstAttribute="leading" secondItem="Lf2-Sj-LVw" secondAttribute="leadingMargin" id="awu-SV-rmR"/>
+                                        <constraint firstItem="br2-kL-U2X" firstAttribute="leading" secondItem="Lf2-Sj-LVw" secondAttribute="leadingMargin" id="dC8-hc-4QT"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="locationLabel" destination="br2-kL-U2X" id="tVH-d7-PK6"/>
+                                    <outlet property="magnitudeImageView" destination="Ztu-7b-4Op" id="lsP-of-oRV"/>
+                                    <outlet property="magnitudeLabel" destination="m75-zD-T3o" id="ilQ-LL-bLM"/>
+                                    <outlet property="timestampLabel" destination="vVF-4x-A8Y" id="dfA-wT-sqT"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ADJ-iy-bVm" id="k9q-Ug-fKy"/>
+                            <outlet property="delegate" destination="ADJ-iy-bVm" id="zg4-CC-Qlt"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Earthquakes" id="Fwl-su-z2p"/>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="guc-fo-Ijv">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </refreshControl>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ujc-cl-hK0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="808.79999999999995" y="-28.335832083958024"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Nse-xF-c4h">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0vl-2h-reO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8GJ-PR-jSg">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ADJ-iy-bVm" kind="relationship" relationship="rootViewController" id="REA-6z-dGV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CdI-el-SYa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-130.40000000000001" y="-28.335832083958024"/>
+        </scene>
+    </scenes>
+</document>
