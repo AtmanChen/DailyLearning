@@ -19,6 +19,7 @@ class HomeViewModel {
     }
     
     let albums: PublishSubject<[Album]> = PublishSubject()
+    let tracks: PublishSubject<[Track]> = PublishSubject()
     public let error : PublishSubject<HomeError> = PublishSubject()
     private let disposeBag = DisposeBag()
     
@@ -32,6 +33,7 @@ class HomeViewModel {
                         let albums = json["Albums"].arrayValue.compactMap { Album(data: try! $0.rawData()) }
                         let tracks = json["Tracks"].arrayValue.compactMap { Track(data: try! $0.rawData()) }
                         self.albums.onNext(albums)
+                        self.tracks.onNext(tracks)
                     case let .failure(failure):
                         switch failure {
                         case .connectionError:

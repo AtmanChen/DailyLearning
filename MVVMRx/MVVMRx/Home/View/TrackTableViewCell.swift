@@ -14,16 +14,24 @@ class TrackTableViewCell: UITableViewCell {
     @IBOutlet weak var trackTitle: UILabel!
     @IBOutlet weak var trackArtist: UILabel!
     
+    var track: Track! {
+        didSet {
+            trackImageView.layer.cornerRadius = 3
+            trackImageView.clipsToBounds = true
+            trackImageView.loadImage(fromURL: track.trackArtWork)
+            trackTitle.text = track.name
+            trackArtist.text = track.artist
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        backgroundColor = .clear
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        trackImageView.image = UIImage()
     }
     
 }

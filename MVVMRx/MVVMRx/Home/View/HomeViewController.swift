@@ -42,10 +42,17 @@ class HomeViewController: UIViewController {
     }
     
     private func setupBindings() {
+        
         viewModel
             .albums
             .observeOn(MainScheduler.instance)
             .bind(to: albumCollectionVC.albums)
+            .disposed(by: disposeBag)
+        
+        viewModel
+            .tracks
+            .observeOn(MainScheduler.instance)
+            .bind(to: trackTableVC.tracks)
             .disposed(by: disposeBag)
     }
 
