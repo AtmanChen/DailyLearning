@@ -1,0 +1,79 @@
+PODS:
+  - Action (3.10.0):
+    - RxCocoa (~> 4.3)
+    - RxSwift (~> 4.3)
+  - ChameleonFramework/Default (2.1.0)
+  - ChameleonFramework/Swift (2.1.0):
+    - ChameleonFramework/Default
+  - Differentiator (3.1.0)
+  - Hero (1.4.0)
+  - Nuke (7.5.2)
+  - RxAtomic (4.4.1)
+  - RxCocoa (4.4.1):
+    - RxSwift (~> 4.0)
+  - RxDataSources (3.1.0):
+    - Differentiator (~> 3.0)
+    - RxCocoa (~> 4.0)
+    - RxSwift (~> 4.0)
+  - RxNuke (0.7):
+    - Nuke (~> 7.0)
+    - RxSwift (~> 4.0)
+  - RxSwift (4.4.1):
+    - RxAtomic (~> 4.4)
+  - TinyNetworking/Core (2.1.0)
+  - TinyNetworking/RxSwift (2.1.0):
+    - RxSwift (~> 4.0)
+    - TinyNetworking/Core
+  - VanillaConstraints (1.0.1)
+
+DEPENDENCIES:
+  - Action
+  - ChameleonFramework/Swift (from `https://github.com/ViccAlexander/Chameleon.git`)
+  - Hero
+  - RxCocoa
+  - RxDataSources
+  - RxNuke
+  - RxSwift
+  - TinyNetworking/RxSwift
+  - VanillaConstraints
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Action
+    - Differentiator
+    - Hero
+    - Nuke
+    - RxAtomic
+    - RxCocoa
+    - RxDataSources
+    - RxNuke
+    - RxSwift
+    - TinyNetworking
+    - VanillaConstraints
+
+EXTERNAL SOURCES:
+  ChameleonFramework:
+    :git: https://github.com/ViccAlexander/Chameleon.git
+
+CHECKOUT OPTIONS:
+  ChameleonFramework:
+    :commit: 6dd284bde21ea2e7f9fd89bc36f40df16e16369d
+    :git: https://github.com/ViccAlexander/Chameleon.git
+
+SPEC CHECKSUMS:
+  Action: 24de4abf6efecd239fa7d8e923df010a12f153d9
+  ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
+  Differentiator: be49ca3408f0ecfc761e4c7763d20c62be01b9ad
+  Hero: bac92350d7201a1a940003e0767c7b52ce7c99a1
+  Nuke: 0350d346a688426e8f2331253ef28dc2fc4f6178
+  RxAtomic: f8d6adc1ccb87a767811269e4875887bc74dbf19
+  RxCocoa: 2f35a76bf8887872e28a1914112395b11b8e0e64
+  RxDataSources: a843bad90c29817f5923ec8163f4af2de084ceb3
+  RxNuke: 8be1b71b08b238608834e5ffac597bcafab1e66f
+  RxSwift: 92fcf68dfef21f3e2ab1965363d9e7b3d787597e
+  TinyNetworking: a1d9df65811b7b7c8991aab6a866376c92802bd8
+  VanillaConstraints: 79afbbd46076f7db75156fe89d73529beae99a9f
+
+PODFILE CHECKSUM: 457d231bc4b8212923aa4d68e19d9d31ae6f257f
+
+COCOAPODS: 1.5.3
