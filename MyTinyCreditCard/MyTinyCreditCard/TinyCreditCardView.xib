@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="CircularStd-Bold.otf">
+            <string>CircularStd-Bold</string>
+        </array>
+        <array key="OCR A Std Regular.ttf">
+            <string>OCRAStd</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TinyCreditCardView" customModule="MyTinyCreditCard" customModuleProvider="target">
+            <connections>
+                <outlet property="cardBrandImageView" destination="Fjd-sC-gAB" id="zwR-MO-2dH"/>
+                <outlet property="cardContainerView" destination="KTa-Ok-e2H" id="dfC-2u-aTV"/>
+                <outlet property="cardFrontView" destination="C4J-dT-Z2x" id="T2h-7v-aAe"/>
+                <outlet property="cardHolderButton" destination="bJ3-Hf-8N9" id="6eW-MU-gQJ"/>
+                <outlet property="cardHolderInputView" destination="GTd-EP-9MD" id="HAk-sa-4O1"/>
+                <outlet property="cardHolderLabel" destination="kPF-EQ-49r" id="Ifs-h8-eiu"/>
+                <outlet property="cardNumberButton" destination="jSg-Pr-UzG" id="Gwa-Rh-eFw"/>
+                <outlet property="cardNumberInputView" destination="xIR-6p-bzF" id="g6x-Y7-yLE"/>
+                <outlet property="cardNumberLabel" destination="IOk-Vo-hCZ" id="iPc-OJ-u7s"/>
+                <outlet property="cardNumberView" destination="ntK-bM-QQz" id="F23-y4-MUZ"/>
+                <outlet property="cscNumberInputView" destination="dfk-JM-eS3" id="zDh-4Z-a4s"/>
+                <outlet property="expDateButton" destination="LOW-oC-aeJ" id="kpE-VA-VzM"/>
+                <outlet property="expDateInputView" destination="cgg-8M-c9E" id="nLS-1x-cFk"/>
+                <outlet property="expDateLabel" destination="jQV-93-RWS" id="31S-Cr-f3D"/>
+                <outlet property="scrollView" destination="Uzu-mZ-N9y" id="9xp-Ju-YC1"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="240"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KTa-Ok-e2H" userLabel="Card Container View">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C4J-dT-Z2x" userLabel="Card Front View">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="40" placeholderIntrinsicHeight="25" translatesAutoresizingMaskIntoConstraints="NO" id="Fjd-sC-gAB">
+                                    <rect key="frame" x="319" y="16" width="40" height="35"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="35" id="nx5-6d-vNw"/>
+                                    </constraints>
+                                </imageView>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="LDV-79-2qB">
+                                    <rect key="frame" x="304.5" y="134.5" width="54.5" height="29.5"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E X P .  D A T E" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8r9-A0-x5z">
+                                            <rect key="frame" x="0.0" y="0.0" width="54.5" height="10.5"/>
+                                            <fontDescription key="fontDescription" name="CircularStd-Bold" family="Circular Std" pointSize="8"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MM/YY" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KCU-bG-73A">
+                                            <rect key="frame" x="0.0" y="18.5" width="54.5" height="11"/>
+                                            <fontDescription key="fontDescription" name="OCRAStd" family="OCR A Std" pointSize="11"/>
+                                            <color key="textColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LOW-oC-aeJ" userLabel="Exp Date Button">
+                                    <rect key="frame" x="298.5" y="128.5" width="66.5" height="41.5"/>
+                                    <connections>
+                                        <action selector="actionExpDateButton:" destination="-1" eventType="touchUpInside" id="YZZ-su-tg0"/>
+                                    </connections>
+                                </button>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="0Ax-w8-ntM">
+                                    <rect key="frame" x="16" y="136.5" width="109" height="27.5"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C A R D  H O L D E R  N A M E" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uIh-lN-Mrk">
+                                            <rect key="frame" x="0.0" y="0.0" width="109" height="10.5"/>
+                                            <fontDescription key="fontDescription" name="CircularStd-Bold" family="Circular Std" pointSize="8"/>
+                                            <color key="textColor" red="0.86208289859999998" green="0.88226538899999996" blue="0.89471417669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NAME SURENAME" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xf9-8A-NIX">
+                                            <rect key="frame" x="0.0" y="16.5" width="109" height="11"/>
+                                            <fontDescription key="fontDescription" name="OCRAStd" family="OCR A Std" pointSize="11"/>
+                                            <color key="textColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bJ3-Hf-8N9" userLabel="Card Holder Button">
+                                    <rect key="frame" x="10" y="130.5" width="121" height="39.5"/>
+                                    <connections>
+                                        <action selector="actionCardHolderButton:" destination="-1" eventType="touchUpInside" id="Zcj-VZ-bhd"/>
+                                    </connections>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kPF-EQ-49r" userLabel="Card Holder Label">
+                                    <rect key="frame" x="16" y="153" width="109" height="11"/>
+                                    <color key="backgroundColor" red="0.18823529410000001" green="0.18823529410000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                    <fontDescription key="fontDescription" name="OCRAStd" family="OCR A Std" pointSize="11"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jQV-93-RWS" userLabel="Exp Date Label">
+                                    <rect key="frame" x="304.5" y="153" width="54.5" height="11"/>
+                                    <fontDescription key="fontDescription" name="OCRAStd" family="OCR A Std" pointSize="11"/>
+                                    <color key="textColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ntK-bM-QQz" userLabel="Card Number View">
+                                    <rect key="frame" x="16" y="68" width="343" height="44"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XXXX XXXX XXXX XXXX" textAlignment="natural" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cio-HG-qnx" userLabel="XXXX XXXX XXXX XXXX">
+                                            <rect key="frame" x="16" y="14" width="311" height="21"/>
+                                            <fontDescription key="fontDescription" name="OCRAStd" family="OCR A Std" pointSize="21"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IOk-Vo-hCZ" userLabel="Card Number Label">
+                                            <rect key="frame" x="16" y="14" width="0.0" height="21"/>
+                                            <color key="backgroundColor" red="0.18823529410000001" green="0.18823529410000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" name="OCRAStd" family="OCR A Std" pointSize="21"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jSg-Pr-UzG" userLabel="Card Number Button">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
+                                            <connections>
+                                                <action selector="actionCardNumberButton:" destination="-1" eventType="touchUpInside" id="c34-pL-SYB"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.18823529410000001" green="0.18823529410000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstItem="jSg-Pr-UzG" firstAttribute="top" secondItem="ntK-bM-QQz" secondAttribute="top" id="FXt-bN-g3k"/>
+                                        <constraint firstItem="IOk-Vo-hCZ" firstAttribute="bottom" secondItem="Cio-HG-qnx" secondAttribute="bottom" id="GsU-Oc-3zh"/>
+                                        <constraint firstItem="Cio-HG-qnx" firstAttribute="top" secondItem="ntK-bM-QQz" secondAttribute="top" constant="14" id="Kf9-Th-bb8"/>
+                                        <constraint firstItem="Cio-HG-qnx" firstAttribute="leading" secondItem="ntK-bM-QQz" secondAttribute="leading" constant="16" id="Nkv-pJ-0H4"/>
+                                        <constraint firstAttribute="trailing" secondItem="Cio-HG-qnx" secondAttribute="trailing" constant="16" id="RCN-g3-qQ0"/>
+                                        <constraint firstAttribute="height" constant="44" id="Yn8-i4-wEW"/>
+                                        <constraint firstItem="IOk-Vo-hCZ" firstAttribute="leading" secondItem="Cio-HG-qnx" secondAttribute="leading" id="dG6-9Z-Gx5"/>
+                                        <constraint firstAttribute="bottom" secondItem="jSg-Pr-UzG" secondAttribute="bottom" id="g9n-HX-SyG"/>
+                                        <constraint firstAttribute="trailing" secondItem="jSg-Pr-UzG" secondAttribute="trailing" id="iUm-Fj-0jR"/>
+                                        <constraint firstItem="jSg-Pr-UzG" firstAttribute="leading" secondItem="ntK-bM-QQz" secondAttribute="leading" id="r3F-12-McA"/>
+                                        <constraint firstItem="IOk-Vo-hCZ" firstAttribute="top" secondItem="Cio-HG-qnx" secondAttribute="top" id="vhy-1l-QdA"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" red="0.18823529410000001" green="0.18823529410000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstItem="bJ3-Hf-8N9" firstAttribute="bottom" secondItem="0Ax-w8-ntM" secondAttribute="bottom" constant="6" id="0MN-RP-jj9"/>
+                                <constraint firstItem="jQV-93-RWS" firstAttribute="bottom" secondItem="KCU-bG-73A" secondAttribute="bottom" id="5D9-Jn-BIk"/>
+                                <constraint firstItem="bJ3-Hf-8N9" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="kPF-EQ-49r" secondAttribute="trailing" constant="6" id="5Tv-U2-adn"/>
+                                <constraint firstItem="bJ3-Hf-8N9" firstAttribute="leading" secondItem="0Ax-w8-ntM" secondAttribute="leading" constant="-6" id="7J8-lg-wW3"/>
+                                <constraint firstItem="LOW-oC-aeJ" firstAttribute="bottom" secondItem="LDV-79-2qB" secondAttribute="bottom" constant="6" id="7dw-Ho-XeM"/>
+                                <constraint firstItem="kPF-EQ-49r" firstAttribute="bottom" secondItem="Xf9-8A-NIX" secondAttribute="bottom" id="8rN-sV-5Me"/>
+                                <constraint firstItem="jQV-93-RWS" firstAttribute="trailing" secondItem="KCU-bG-73A" secondAttribute="trailing" id="Bq4-cC-lW4"/>
+                                <constraint firstItem="ntK-bM-QQz" firstAttribute="centerX" secondItem="C4J-dT-Z2x" secondAttribute="centerX" id="Gnb-PT-GO7"/>
+                                <constraint firstItem="0Ax-w8-ntM" firstAttribute="leading" secondItem="C4J-dT-Z2x" secondAttribute="leading" constant="16" id="K6Q-jv-faH"/>
+                                <constraint firstItem="LOW-oC-aeJ" firstAttribute="top" secondItem="LDV-79-2qB" secondAttribute="top" constant="-6" id="KEv-Ow-XJo"/>
+                                <constraint firstItem="bJ3-Hf-8N9" firstAttribute="trailing" secondItem="0Ax-w8-ntM" secondAttribute="trailing" constant="6" id="P65-AV-7uZ"/>
+                                <constraint firstItem="ntK-bM-QQz" firstAttribute="trailing" secondItem="LDV-79-2qB" secondAttribute="trailing" id="S9Z-lW-NcK"/>
+                                <constraint firstItem="ntK-bM-QQz" firstAttribute="centerY" secondItem="C4J-dT-Z2x" secondAttribute="centerY" id="Sgm-Qd-q6h"/>
+                                <constraint firstItem="jQV-93-RWS" firstAttribute="leading" secondItem="KCU-bG-73A" secondAttribute="leading" id="Wxc-XR-iqf"/>
+                                <constraint firstItem="kPF-EQ-49r" firstAttribute="top" secondItem="Xf9-8A-NIX" secondAttribute="top" id="bOT-nC-9Ni"/>
+                                <constraint firstItem="ntK-bM-QQz" firstAttribute="leading" secondItem="0Ax-w8-ntM" secondAttribute="leading" id="c2p-J3-tpM"/>
+                                <constraint firstItem="LOW-oC-aeJ" firstAttribute="trailing" secondItem="LDV-79-2qB" secondAttribute="trailing" constant="6" id="cFx-of-obj"/>
+                                <constraint firstAttribute="trailing" secondItem="Fjd-sC-gAB" secondAttribute="trailing" constant="16" id="gLe-EH-BUL"/>
+                                <constraint firstItem="Fjd-sC-gAB" firstAttribute="top" secondItem="C4J-dT-Z2x" secondAttribute="top" constant="16" id="i2s-tG-HVD"/>
+                                <constraint firstItem="bJ3-Hf-8N9" firstAttribute="top" secondItem="0Ax-w8-ntM" secondAttribute="top" constant="-6" id="iPa-Rj-iKN"/>
+                                <constraint firstItem="jQV-93-RWS" firstAttribute="top" secondItem="KCU-bG-73A" secondAttribute="top" id="kc5-dl-yTs"/>
+                                <constraint firstAttribute="bottom" secondItem="0Ax-w8-ntM" secondAttribute="bottom" constant="16" id="lor-iq-tZe"/>
+                                <constraint firstItem="kPF-EQ-49r" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Xf9-8A-NIX" secondAttribute="trailing" id="pXe-iN-UNM"/>
+                                <constraint firstItem="LOW-oC-aeJ" firstAttribute="leading" secondItem="LDV-79-2qB" secondAttribute="leading" constant="-6" id="tgW-CW-mYn"/>
+                                <constraint firstItem="kPF-EQ-49r" firstAttribute="leading" secondItem="Xf9-8A-NIX" secondAttribute="leading" id="u1l-S3-9HI"/>
+                                <constraint firstAttribute="bottom" secondItem="LDV-79-2qB" secondAttribute="bottom" constant="16" id="vSY-VL-SxG"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.18823529410000001" green="0.18823529410000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="C4J-dT-Z2x" firstAttribute="top" secondItem="KTa-Ok-e2H" secondAttribute="top" id="3MW-Di-VIX"/>
+                        <constraint firstAttribute="height" constant="180" id="74a-E7-OBa"/>
+                        <constraint firstAttribute="bottom" secondItem="C4J-dT-Z2x" secondAttribute="bottom" id="YKV-5p-auo"/>
+                        <constraint firstAttribute="trailing" secondItem="C4J-dT-Z2x" secondAttribute="trailing" id="p7i-vD-bYj"/>
+                        <constraint firstItem="C4J-dT-Z2x" firstAttribute="leading" secondItem="KTa-Ok-e2H" secondAttribute="leading" id="zep-Fq-AX2"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b3S-I8-qoA">
+                    <rect key="frame" x="0.0" y="196" width="375" height="44"/>
+                    <subviews>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uzu-mZ-N9y">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xdo-73-Um4">
+                                    <rect key="frame" x="4" y="0.0" width="1492" height="44"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xIR-6p-bzF" userLabel="Card Number Input View" customClass="TinyCreditCardInputView" customModule="MyTinyCreditCard" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="367" height="44"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="placeHolder" value="Input card number"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GTd-EP-9MD" userLabel="Card Holder Input View" customClass="TinyCreditCardInputView" customModule="MyTinyCreditCard" customModuleProvider="target">
+                                            <rect key="frame" x="375" y="0.0" width="367" height="44"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="placeHolder" value="Input Holder Name"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cgg-8M-c9E" userLabel="Exp Date Input View" customClass="TinyCreditCardInputView" customModule="MyTinyCreditCard" customModuleProvider="target">
+                                            <rect key="frame" x="750" y="0.0" width="367" height="44"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="placeHolder" value="Pick Exp Date"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dfk-JM-eS3" userLabel="Csc Number Input View" customClass="TinyCreditCardInputView" customModule="MyTinyCreditCard" customModuleProvider="target">
+                                            <rect key="frame" x="1125" y="0.0" width="367" height="44"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="placeHolder" value="Input Csc Number"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="cgg-8M-c9E" firstAttribute="width" secondItem="xIR-6p-bzF" secondAttribute="width" id="K82-Fm-qMO"/>
+                                        <constraint firstItem="GTd-EP-9MD" firstAttribute="width" secondItem="xIR-6p-bzF" secondAttribute="width" id="U73-5U-At4"/>
+                                        <constraint firstItem="dfk-JM-eS3" firstAttribute="width" secondItem="xIR-6p-bzF" secondAttribute="width" id="lYG-sQ-HUK"/>
+                                    </constraints>
+                                </stackView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="xdo-73-Um4" firstAttribute="height" secondItem="Uzu-mZ-N9y" secondAttribute="height" id="5gu-nm-sFi"/>
+                                <constraint firstAttribute="trailing" secondItem="xdo-73-Um4" secondAttribute="trailing" constant="4" id="7z0-26-Onx"/>
+                                <constraint firstItem="xdo-73-Um4" firstAttribute="top" secondItem="Uzu-mZ-N9y" secondAttribute="top" id="lgM-RT-nZy"/>
+                                <constraint firstAttribute="bottom" secondItem="xdo-73-Um4" secondAttribute="bottom" id="on4-8j-2G9"/>
+                                <constraint firstItem="xdo-73-Um4" firstAttribute="leading" secondItem="Uzu-mZ-N9y" secondAttribute="leading" constant="4" id="wGu-Ms-azm"/>
+                            </constraints>
+                        </scrollView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="2Cb-4N-ffK"/>
+                        <constraint firstItem="Uzu-mZ-N9y" firstAttribute="leading" secondItem="b3S-I8-qoA" secondAttribute="leading" id="JjA-wk-KHy"/>
+                        <constraint firstAttribute="bottom" secondItem="Uzu-mZ-N9y" secondAttribute="bottom" id="Lch-iE-aPj"/>
+                        <constraint firstItem="Uzu-mZ-N9y" firstAttribute="top" secondItem="b3S-I8-qoA" secondAttribute="top" id="Ugm-6V-RNY"/>
+                        <constraint firstAttribute="trailing" secondItem="Uzu-mZ-N9y" secondAttribute="trailing" id="zOz-vQ-tuz"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="b3S-I8-qoA" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="85E-Y0-uZG"/>
+                <constraint firstItem="Uzu-mZ-N9y" firstAttribute="top" secondItem="KTa-Ok-e2H" secondAttribute="bottom" priority="999" constant="20" id="IqP-Qe-Jid"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="b3S-I8-qoA" secondAttribute="trailing" id="Keg-yg-vPi"/>
+                <constraint firstItem="KTa-Ok-e2H" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="SGh-uz-MFI"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="KTa-Ok-e2H" secondAttribute="trailing" id="Sm7-Aj-tyL"/>
+                <constraint firstItem="xIR-6p-bzF" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" constant="-8" id="cxp-rs-Y8N"/>
+                <constraint firstItem="b3S-I8-qoA" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="jaL-dJ-1qo"/>
+                <constraint firstItem="KTa-Ok-e2H" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="kUD-I2-5tH"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="-210.40000000000001" y="-130.43478260869566"/>
+        </view>
+    </objects>
+</document>
